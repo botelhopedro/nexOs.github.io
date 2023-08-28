@@ -41,14 +41,14 @@ function prossiga(comando){
     output.innerHTML = text
 }
 
-help = [
+let help = [
     '<br> members &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp Quem são esses malucos',
     '<br> mission &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp O que eles querem com você',
     '<br> whatnext &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp No que você pode ajudar eles',
     '<br> social &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp Aonde encontrar eles'
 ]
 
-members = [
+let members = [
     "Exploit: Esse cara pipipi popopo",
     "Cipher: Esse Também",
     "Dystopia: Muito massa esse nome não é",
@@ -56,14 +56,20 @@ members = [
     "Qu33n: rainha la ele"
 ]
 
-whatnext = [
+let whatnext = [
 
     "Dá uma volta por esse sistema, se aconstuma com o hambiente, vc vai passar um bom tempo aqui"
 
 ]
 
-social = [
+let social = [
 
     "@pedrobotelhosouza"
+
+]
+
+let mission = [
+
+    "Estamos aqui pra te ensinar sobre Segurança, vamos te tornar um verdadeiro hacker, ou só de deixar mais inteligente, sei lá"
 
 ]
