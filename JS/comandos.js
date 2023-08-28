@@ -29,6 +29,9 @@ function prossiga(comando){
         case 'social':
         text += "<br>" + social;
         break;
+        case 'mission':
+            text = "<br/>" + mission;
+            break;
         case 'clear':
             text = [];
             break;
