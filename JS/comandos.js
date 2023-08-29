@@ -12,7 +12,7 @@ function  teste(e){
         case 'Enter':
             if(input.value.includes('echo ')){
                 comandoConsole(input.value);
-            }if else(input.value.includes('sum()')){
+            }else if(input.value.includes('sum()')){
                 sumComand(input.value);
             }else{
                 prossiga(input.value);
