@@ -12,12 +12,21 @@ function  teste(e){
         case 'Enter':
             if(input.value.includes('echo ')){
                 comandoConsole(input.value);
+            }if else(input.value.includes('sum()')){
+                sumComand(input.value);
             }else{
                 prossiga(input.value);
             }
             break;
     }
 
+}
+
+function sumComand(value){
+    value = eval(texto.replace('sum()', ''));
+    text += "<br/>" + value
+    input.value = "";
+    output.innerHTML = text
 }
 
 function comandoConsole(texto){
