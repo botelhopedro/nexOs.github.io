@@ -2,15 +2,30 @@
 input = document.getElementById("terminalIn");
 output = document.getElementById("end")
 
+input.focus()
+
 text = []
 
 function  teste(e){
 
     switch(e){
         case 'Enter':
-            prossiga(input.value);
+            if(input.value.includes('echo ')){
+                comandoConsole(input.value);
+            }else{
+                prossiga(input.value);
+            }
             break;
     }
+
+}
+
+function comandoConsole(texto){
+
+    texto = texto.replace("echo ", "")
+    text += "<br/>" + texto
+    input.value = "";
+    output.innerHTML = text
 
 }
 
@@ -30,7 +45,13 @@ function prossiga(comando){
         text += "<br>" + social;
         break;
         case 'mission':
-            text = "<br/>" + mission;
+            text += "<br/>" + mission;
+            break;
+        case 'OGC':
+            text += "<br/>" + ogc
+            break;
+        case 'echo':
+            text += "o comando echo deve ser acompanhado de mais algo, por exemplo 'echo teste'"
             break;
         case 'clear':
             text = [];
@@ -48,7 +69,8 @@ let help = [
     '<br> members &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp Quem são esses malucos',
     '<br> mission &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp O que eles querem com você',
     '<br> whatnext &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp No que você pode ajudar eles',
-    '<br> social &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp Aonde encontrar eles'
+    '<br> social &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp Aonde encontrar eles',
+    '<br> echo &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp escreva algo no terminal, não serve pra nada, mas é legal'
 ]
 
 let members = [
@@ -74,5 +96,11 @@ let social = [
 let mission = [
 
     "Estamos aqui pra te ensinar sobre Segurança, vamos te tornar um verdadeiro hacker, ou só de deixar mais inteligente, sei lá"
+
+]
+
+let ogc = [
+
+    "OGC, Quais segredos essa sigla escoonde?"
 
 ]
