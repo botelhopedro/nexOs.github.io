@@ -23,7 +23,7 @@ function  teste(e){
 }
 
 function sumComand(value){
-    value = eval(value.replace('sum()', ''));
+    value = eval(value.replace('sum(|)', ''));
     text += "<br/>" + value
     input.value = "";
     output.innerHTML = text
